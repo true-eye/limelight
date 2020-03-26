@@ -1,0 +1,35 @@
+appId: com.limelight.app
+copyright: Limelight For FRC
+productName: Limelight Finder
+
+directories:
+  output: dist/
+
+# afterSign: ./configuration/afterSignHook.js
+
+mac:
+  category: public.app-category.business
+  gatekeeperAssess: false
+  # hardenedRuntime: true
+  entitlements: ./configuration/entitlements.mac.plist
+  entitlementsInherit: ./configuration/entitlements.mac.plist
+  target:
+    - zip
+    - dmg
+
+win:
+  target:
+    - target: nsis
+      arch:
+        - x64
+        - ia32
+    # - target: portable
+    #   arch:
+    #     - x64
+    #     - ia32
+
+linux:
+  category: Office
+  target:
+    - deb
+    - AppImage

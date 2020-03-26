@@ -1,0 +1,17 @@
+.vscode
+
+# dependencies
+/node_modules
+/npm-debug.log*
+/yarn-error.log
+/src/renderer/node_modules
+
+# production
+/dist
+
+# misc
+.DS_Store
+
+# umi
+.umi
+.umi-production
